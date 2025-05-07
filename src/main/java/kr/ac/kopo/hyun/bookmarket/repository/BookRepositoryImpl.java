@@ -25,6 +25,7 @@ public class BookRepositoryImpl  implements BookRepository{
         book1.setReleaseDate("2024/12/31");
         book1.setCondition("신규도서");
 
+
         listOfBooks.add(book1);
 
         Book book2 = new Book();
@@ -37,6 +38,7 @@ public class BookRepositoryImpl  implements BookRepository{
         book2.setReleaseDate("2024/12/31");
         book2.setCondition("중고도서");
         book2.setCategory("IT교양");
+        book1.setFileName("isbn0002,jpg");
 
         listOfBooks.add(book2);
 
@@ -79,5 +81,10 @@ public class BookRepositoryImpl  implements BookRepository{
             throw new IllegalArgumentException("도서번호가 "+ bookId + "인 해당도서를 찾을 수 없습니다.");
         }
         return bookInfo;
+    }
+
+    @Override
+    public void setNewBook(Book book) {
+
     }
 }

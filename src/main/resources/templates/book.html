@@ -61,6 +61,12 @@
                         <button class="btn btn-primary btn-lg" type="button">Example button</button>
                     </div>
                 </div>
+                <div class="row align-items-md-stretch">
+                    <div class="col-md-4">
+                        <img th:src="@{/images/book.jpg}" class="img-fluid" alt="...">
+                        <div class="text-center">
+                            <a style="text-decoration-line: none" th:href="@{download(file=${book.getBookId()})}"
+                </div>
 
                 <div class="row align-items-md-stretch">
                     <div class="col-md-12">

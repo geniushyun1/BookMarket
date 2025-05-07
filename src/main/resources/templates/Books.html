@@ -67,7 +67,15 @@
                 </div>
 
                 <div class="row align-items-md-stretch">
+                    <div class="col-md-4">
+                        <img th:src="/BookMarket/images/'+${book.getFileName()}" style="width: 90%">
+
+                    </div>
                     <div class="col-md-4" th:each="book:${bookList}">
+                        <img th:src="/BookMarket/images/'+${book.getFileName()}" style="width: 60%">
+
+
+
                         <h3 th:text="${book.getName()}"></h3>
                         <p th:text="${book.getAuthor()}"></p>
                         <p th:text="${book.getPublisher() + '|'+ book.getReleaseDate}"></p>

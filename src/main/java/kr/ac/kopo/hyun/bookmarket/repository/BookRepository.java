@@ -9,4 +9,5 @@ public interface BookRepository {
     Book getBookById(String bookId);
     List<Book> getBookByCategory(String category);
     Book getBookById(int id);
+    void setNewBook(Book book);
 }
