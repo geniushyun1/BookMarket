@@ -60,12 +60,15 @@ public class BookController {
     }
 
     @GetMapping("/add")
-    public String requestAddBookForm() {
+    public String requestAddBookForm(Model model) {
+        model.addAttribute("book", new Book());
         return "addBook";
     }
 
     @PostMapping("/add")
-    public String requestSubmitNewBook(@ModelAttribute("book") Book book) {
+    public String requestSubmitNewBook(@Valid @ModelAttribute("book") Book book, BindingResult bindingResult) {
+
+
 
         MultipartFile file = book.getBookImage();
         String saveName = file.getOriginalFilename();

@@ -1,6 +1,7 @@
 package kr.ac.kopo.hyun.bookmarket.domain;
 
 import lombok.Getter;
+import jakarta.validation.constraints.Pattern;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.web.multipart.MultipartFile;
@@ -10,8 +11,13 @@ import java.math.BigDecimal;
 @Setter
 @NoArgsConstructor
 public class Book {
+    @Pattern(regexp = "^[A-Za-z0-9]{10}$") // Example regex: validates alphanumeric strings of exactly 10 characters
     private String bookId;//도서번호
+    @Size(min =3, max =50)
     private String Name;//도서명
+    @Min(0)
+    @Digits(integer = 8, fraction= 2)
+    @NotNull
     private String author;//작가
     private BigDecimal uniPrice;//단가
     private String description;//도서 설명

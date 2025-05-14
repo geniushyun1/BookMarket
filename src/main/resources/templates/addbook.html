@@ -29,11 +29,21 @@
                 <div class="mb-3 row">
                     <label class="col-sm-2 control-label">도서 ID</label>
                     <div class="col-sm-3">
-                        <input type="text" name="bookId" class="form-control">
+                        <input type="text" name="bookId" class="form-control" th:field="*{bookId}">
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-danger" th:errors="*{bookId}"/>
+
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <label class="col-sm-2 control-label">도서명</label>
+                    <div class="col-sm-3">
+                        <input type="text" name="bookId" class="form-control" th:field="*{name}">
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-danger" th:errors="*{name}"/>
+                    </div>
                     <div class="col-sm-3">
                         <input type="text" name="name" class="form-control">
                     </div>
@@ -47,11 +57,20 @@
                 <div class="mb-3 row">
                     <label class="col-sm-2 control-label">저자</label>
                     <div class="col-sm-3">
+                        <input type="text" name="bookId" class="form-control" th:field="*{uniPrice}">
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-danger" th:errors="*{uniPrice}"/>
+                    </div>
+                    <div class="col-sm-3">
                         <input type="text" name="author" class="form-control">
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <label class="col-sm-2 control-label">상세정보</label>
+                    <div class="col-sm-3">
+                        <input type="text" name="bookId" class="form-control" th:field="*{detail}">
+                    </div>
                     <div class="col-sm-3">
                         <textarea name="drscription" class="form-control" cols="50" rows="2"></textarea>
                     </div>
